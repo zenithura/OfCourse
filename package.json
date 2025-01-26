@@ -2,13 +2,10 @@
   "name": "course-store",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "frontend"
-  ],
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd frontend && npm start",
-    "vercel-build": "cd frontend && npm install && npm run build"
+    "build": "cd frontend ; npm install ; npm run build",
+    "start": "cd frontend ; npm start",
+    "vercel-build": "cd frontend ; npm install ; npm run build"
   },
   "engines": {
     "node": ">=14.0.0"
