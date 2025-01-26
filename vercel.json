@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "version": 2,
   "buildCommand": "cd frontend && npm install && npm run build",
@@ -15,4 +16,23 @@
       "dest": "/frontend/$1"
     }
   ]
+=======
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
+  ]
+>>>>>>> 69fb7d9ac1292c01f8560de7ba11a088ef5c8bdb
 } 
