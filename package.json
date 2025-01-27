@@ -1,0 +1,18 @@
+{
+  "name": "course-store",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+<<<<<<< HEAD
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd frontend && npm start",
+    "vercel-build": "cd frontend && npm install && npm run build"
+=======
+    "build": "cd frontend ; npm install ; npm run build",
+    "start": "cd frontend ; npm start"
+>>>>>>> 69fb7d9ac1292c01f8560de7ba11a088ef5c8bdb
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 
