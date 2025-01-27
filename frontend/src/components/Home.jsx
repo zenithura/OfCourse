@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react'; 
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { Download, MessageCircle, Search, Star, BookOpen, ChevronDown, ChevronUp, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -56,7 +56,7 @@ export const Home = () => {
   // API'den veri çekme fonksiyonları
   const fetchCategories = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/categories');
+      const response = await axios.get('https://ayxanmammadov.pythonanywhere.com/api/categories');
       setCategories(response.data);
     } catch (error) {
       console.error('Kategoriler yüklenirken hata:', error);
@@ -65,7 +65,7 @@ export const Home = () => {
 
   const fetchTags = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tags');
+      const response = await axios.get('https://ayxanmammadov.pythonanywhere.com/api/tags');
       setAllTags(response.data);
     } catch (error) {
       console.error('Etiketler yüklenirken hata:', error);
@@ -95,7 +95,7 @@ export const Home = () => {
         params.append('discount', selectedDiscountFilter);
       }
       
-      const response = await axios.get('http://localhost:5000/api/courses', { params });
+      const response = await axios.get('https://ayxanmammadov.pythonanywhere.com/api/courses', { params });
       setCourses(response.data);
     } catch (error) {
       console.error('Kurslar yüklenirken hata:', error);
@@ -269,7 +269,7 @@ export const Home = () => {
 
   const handleDownload = async (courseId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/download/${courseId}`);
+      const response = await axios.get(`https://ayxanmammadov.pythonanywhere.com/api/download/${courseId}`);
       
       if (!response.data.download_url) {
         throw new Error('İndirilebilir dosya bulunamadı');
@@ -784,4 +784,4 @@ export const Home = () => {
       </div>
     </>
   );
-}; 
+};
